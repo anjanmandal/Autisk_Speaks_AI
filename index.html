@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI‑Powered Autism Support — Overview</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter','sans-serif'] },
+          colors: { brand: { 400: 'hsl(210,98%,48%)' } }
+        }
+      }
+    };
+  </script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Splide CSS -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 4rem; }
+    .bg-parallax { background-attachment: fixed; }
+    @media (max-width: 768px) {
+      .splide__arrows { display: none; }
+    }
+    .perspective { perspective: 1000px; }
+    .preserve-3d { transform-style: preserve-3d; }
+    .backface-hidden { backface-visibility: hidden; }
+    .rotate-y-180 { transform: rotateY(180deg); }
+  </style>
+</head>
+<body class="font-inter text-gray-800 bg-slate-50 overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="fixed inset-x-0 top-0 bg-white/80 backdrop-blur z-50">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#hero" class="text-xl font-bold text-brand-400">Autism Speaks AI</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#problem" class="hover:text-brand-400">Problem</a></li>
+        <li><a href="#support" class="hover:text-brand-400">Traditional Support</a></li>
+        <li><a href="#solution" class="hover:text-brand-400">Solution</a></li>
+        <li><a href="#team" class="hover:text-brand-400">Team</a></li>
+      </ul>
+      <button class="md:hidden text-white bg-brand-400 px-4 py-2 rounded" onclick="openMenu()">Menu</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero"
+           class="h-screen bg-[url('./public/walpaper.jpg')] bg-cover bg-center bg-parallax flex items-center justify-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/10"></div>
+    <div class="relative text-center text-white px-6" data-aos="fade-up">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">AI‑Powered Lifespan Support for Autism</h1>
+      <p class="text-lg md:text-2xl mb-8">From first words to first job – personalized, evidence‑guided help is one click away.</p>
+      <a href="#solution"
+         class="bg-brand-400 hover:bg-brand-500 px-8 py-4 rounded-full shadow-lg transition">Explore How →</a>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem" class="py-24 px-6 lg:px-20 bg-white">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+      The Challenge – Autism Across the Lifespan
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" data-aos="zoom-in">
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">👶</span>
+          <h3 class="text-xl font-semibold">Early Communication</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>1 in 36 US 8‑y‑olds diagnosed (CDC).</li>
+          <li>70 % preschoolers show atypical language.</li>
+          <li>Classroom talk & play become hard.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🎧</span>
+          <h3 class="text-xl font-semibold">Sensory Processing</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>45–95 % show sensory hyper/hypo‑reactivity.</li>
+          <li>Triggers unpredictable meltdowns.</li>
+          <li>Families live on constant alert.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🧑‍🤝‍🧑</span>
+          <h3 class="text-xl font-semibold">Teen Social‑Emotional</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>≈40 % experience anxiety.</li>
+          <li>Need weekly guided practice (PEERS®).</li>
+          <li>Few stigma‑free spaces to rehearse.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">🙂</span>
+          <h3 class="text-xl font-semibold">Emotion Recognition</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>Difficulties reading faces & tone.</li>
+          <li>Leads to misunderstandings.</li>
+          <li>Amplifies exclusion & stress.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">💼</span>
+          <h3 class="text-xl font-semibold">Adult Services Gap</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>50–80 % unemployment.</li>
+          <li>Many counties lack adult clinics.</li>
+          <li>Parents remain default carers.</li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition">
+        <div class="flex items-center mb-4">
+          <span class="text-3xl mr-3">👨‍👩‍👧</span>
+          <h3 class="text-xl font-semibold">Family Burden</h3>
+        </div>
+        <ul class="text-gray-600 space-y-1">
+          <li>PIIs work when parents get feedback.</li>
+          <li>No single dashboard exists today.</li>
+          <li>Data silos add stress.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Traditional Support Section -->
+  <section id="support" class="py-24 px-6 lg:px-20 bg-slate-50 dark:bg-gray-900">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gray-800 dark:text-gray-100" data-aos="fade-up">
+      Why Traditional Supports Fall Short
+    </h2>
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-left">
+      <!-- Card 1 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 flex flex-col"
+      >
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-brand-400 dark:text-brand-300 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!-- placeholder clinic/mappin icon -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 9a3 3 0 110-6 3 3 0 010 6z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Fragmented Access</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 flex-grow">
+          Clinic‑based services are costly, geography‑locked, and often have long waitlists.
+        </p>
+        <span class="mt-6 inline-block text-sm font-medium text-brand-400 dark:text-brand-300">
+          High costs &amp; wait times →
+        </span>
+      </div>
+  
+      <!-- Card 2 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 flex flex-col"
+      >
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-brand-400 dark:text-brand-300 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!-- placeholder document icon -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 4H7a2 2 0 01-2-2V6a2 2 0 012-2h5l5 5v11a2 2 0 01-2 2z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Static Materials</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 flex-grow">
+          PDF social stories lack adaptive difficulty, real‑time feedback, or progress tracking.
+        </p>
+        <span class="mt-6 inline-block text-sm font-medium text-brand-400 dark:text-brand-300">
+          Passive content fails engagement →
+        </span>
+      </div>
+  
+      <!-- Card 3 -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 flex flex-col"
+      >
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-brand-400 dark:text-brand-300 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <!-- placeholder world/env icon -->
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0v20m0-20a7 7 0 017 7H5a7 7 0 017-7z" />
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Poor Generalisation</h3>
+        </div>
+        <p class="text-gray-600 dark:text-gray-300 flex-grow">
+          Skills learned in therapy often collapse under real‑world sensory overload.
+        </p>
+        <span class="mt-6 inline-block text-sm font-medium text-brand-400 dark:text-brand-300">
+          Real environments vary too much →
+        </span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Solution Section -->
+  <section id="solution" class="py-24 px-6 lg:px-20 bg-white">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">Our AI‑Enabled Solution</h2>
+    <p class="text-center max-w-xl mx-auto mb-12 text-gray-600" data-aos="fade-up" data-aos-delay="200">
+      Seven integrated modules turn episodic therapy into an always‑on ecosystem.
+    </p>
+    <div id="module-carousel" class="splide max-w-6xl mx-auto" data-aos="fade-in">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/conversation.png"
+                   alt="Conversation Companion"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">🗨️</span>Conversation Companion
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Unlimited practice for greetings, interviews & doctor visits.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Adaptive difficulty + badges</li>
+                  <li>Literal/idiom‑free Autism Mode</li>
+                  <li>Speech, text & symbol input</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/scenario.png"
+                   alt="Scenario-Based Learning"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">🧠</span>Scenario‑Based Learning
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Evidence‑backed PEERS® curricula to boost social reciprocity.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Real‑time feedback</li>
+                  <li>Next‑step coaching</li>
+                  <li>Gamified learning paths</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/emotion.png"
+                   alt="Emotion Recognition Quiz"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">😊</span>Emotion‑Recognition Quiz
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Fresh Gemini-generated faces for affect‑label training.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Diverse, copyright‑safe images</li>
+                  <li>Live performance graphs</li>
+                  <li>Points & leaderboards</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/virtual.png"
+                   alt="Audio-to-Audio Virtual Therapist"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">🎤</span>Audio‑to‑Audio Virtual Therapist
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  One‑tap voice UX extends CBT-based anxiety coaching.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Auto‑logged sessions & summaries</li>
+                  <li>Built‑in breathing & grounding scripts</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/parent.png"
+                   alt="Mood & Behaviour Journal"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">📔</span>Mood & Behaviour Journal
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Encrypted multimedia logs & AI summaries flag spikes.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Parent‑controlled sharing</li>
+                  <li>Adaptive support recommendations</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/community.png"
+                   alt="Community & Caregiver Portal"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">🤝</span>Community & Caregiver Portal
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Peer exchange reduces caregiver stress & boosts generalisation.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>AI moderation blocks harassment</li>
+                  <li>Role‑specific dashboards</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide p-4">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+              <img src="./public/real-time.png"
+                   alt="Real-Time Interaction Insights"
+                   class="h-40 w-full object-cover" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                  <span class="text-2xl">🎯</span>Real-Time Interaction Insights
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Tracks live facial cues, eye contact, tone, and emotional expression.
+                </p>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>Supports social-emotional learning</li>
+                  <li>AI-powered expression analysis</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-24 px-6 lg:px-20 bg-slate-50">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+      Meet the Team
+    </h2>
+    <div id="team-carousel" class="splide max-w-4xl mx-auto" data-aos="fade-in">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide text-center p-4">
+            <img src="./public/profile.png"
+                 class="mx-auto rounded-full w-32 h-32 mb-4" alt="Alex Kim" />
+            <h3 class="font-semibold">Anjan Mandal</h3>
+            <p class="text-gray-600 text-sm">CEO</p>
+          </li>
+          <li class="splide__slide text-center p-4">
+            <img src="./public/pradeep.png"
+                 class="mx-auto rounded-full w-32 h-32 mb-4" alt="Priya Sharma" />
+            <h3 class="font-semibold">Pradeep Poudel</h3>
+            <p class="text-gray-600 text-sm">Software Engineer</p>
+          </li>
+          <li class="splide__slide text-center p-4">
+            <img src="./public/roshani.jpg"
+                 class="mx-auto rounded-full w-32 h-32 mb-4" alt="Dr Miguel Lopez" />
+            <h3 class="font-semibold">Roshani Pathak</h3>
+            <p class="text-gray-600 text-sm">Clinical Advisor</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+ <!-- Call to Action -->
+ <section id="cta" class="py-24 px-6 lg:px-20 bg-brand-400 text-white text-center relative" data-aos="zoom-in">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to bridge the gap?</h2>
+    <p class="max-w-2xl mx-auto mb-10 text-lg">Apply to join our pilot program and be among the first to experience NeuroBridge.</p>
+    <button id="cta-button"
+            class="bg-white text-brand-400 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+      Request Early Access
+    </button>
+  </section>
+
+  <!-- Modal -->
+  <div id="cta-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-8 max-w-md w-full text-center">
+      <h3 class="text-2xl font-semibold mb-4">Thanks for your interest!</h3>
+      <p class="mb-6">We’ll reach out as soon as early access spots open. In the meantime, explore our resources below:</p>
+      <div class="space-x-4">
+        <a href="#problem" class="inline-block text-brand-400 font-medium hover:underline">Learn More</a>
+        <a href="#team" class="inline-block text-brand-400 font-medium hover:underline">Meet the Team</a>
+      </div>
+      <button onclick="toggleModal()"
+              class="mt-6 px-6 py-3 bg-brand-400 text-white rounded-lg hover:bg-brand-500 transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-gray-400 bg-gray-900">
+    <p>Follow us on</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="https://twitter.com/NeuroBridge" aria-label="Twitter">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/twitter.svg" alt="Twitter" class="w-6 h-6" />
+      </a>
+      <a href="https://linkedin.com/company/neurobridge" aria-label="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+      </a>
+      <a href="https://instagram.com/neurobridge" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram" class="w-6 h-6" />
+      </a>
+    </div>
+    <p class="mt-4 text-xs">© 2025 NeuroBridge • All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <script>
+    function toggleModal() {
+      document.getElementById('cta-modal').classList.toggle('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ once: true });
+      new Splide('#module-carousel', { perPage: 2, gap: '1rem', autoplay: true,
+        breakpoints: { 768: { perPage: 1 } }
+      }).mount();
+      new Splide('#team-carousel', { perPage: 3, gap: '1rem',
+        breakpoints: { 1024: { perPage: 2 }, 768: { perPage: 1 } }
+      }).mount();
+      document.getElementById('cta-button').onclick = toggleModal;
+    });
+  </script>
+</body>
+</html>
